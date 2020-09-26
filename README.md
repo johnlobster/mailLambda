@@ -36,6 +36,21 @@ Local testing with Postman
 
 Testing is not that hard, configuration is a major pain. `netlify-lambda` gets you started quickly, but very hard to debug
 
+Local debug using
+```
+node --trace-warnings mailer.node.test.js
+```
+
+node incompatibility with js modules is very frustrating
+Tried to use Jest
+
+When deployed on Netlify, test with Postman
+URL
+```
+https://nifty-babbage-7c7caa.netlify.app/.netlify/functions/mailer.js
+```
+
+
 ### Dev setup
 
 #### Add repo to netlify in github
