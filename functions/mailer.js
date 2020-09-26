@@ -38,7 +38,7 @@ dotenv.config() // Note, potential bug if nodemailer needed environment variable
 /* event object supplied by Netlify
 {
     "path": "Path parameter",
-    "httpMethod": "Incoming request's method name"
+    "httpMethod": "Incoming request's method name" (POST/GET)
     "headers": {Incoming request headers}
     "queryStringParameters": {query string parameters }
     "body": "A JSON string of the request payload."
@@ -109,12 +109,12 @@ export async function handler(event) {
     }
   }
 
-  if ( event.httpMethod !== "https") {
-    console.log(`function called by ${event.headers.host} was not https ( ${event.httpMethod})`)
+  if ( event.httpMethod !== "POST") {
+    console.log(`function called by ${event.headers.host} was not POST ( ${event.httpMethod})`)
     console.log(`Message body\n${event.body}`)
     return {
       statusCode: 400,
-      body: `Error: function called by ${event.headers.host} was not https ( ${event.httpMethod})`,
+      body: `Error: function called by ${event.headers.host} was not POST ( ${event.httpMethod})`,
     }
   }
   // identify calling website 

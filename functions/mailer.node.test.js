@@ -23,7 +23,7 @@ import {handler} from './mailer.js'
   // simple body
   const event1 = {
     path: "localhost:9000",
-    httpMethod: "https",
+    httpMethod: "POST",
     headers: {
       host: "localhost:9000"
     },
@@ -33,7 +33,7 @@ import {handler} from './mailer.js'
   // body is JSON string
   const event2 = {
     path: "localhost:9000",
-    httpMethod: "https",
+    httpMethod: "POST",
     headers: {
       host: "localhost:9000"
     },
@@ -43,7 +43,7 @@ import {handler} from './mailer.js'
   // unrecognized host
   const event3 = {
     path: "bad.com",
-    httpMethod: "https",
+    httpMethod: "POST",
     headers: {
       host: "bad.com"
     },
