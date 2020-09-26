@@ -73,6 +73,7 @@ export async function handler(event) {
 
   const entryTime = new Date()
   console.log(`Handler called by website ${event.headers.host} ${entryTime}`)
+  console.log(event)
   // check all environment variables
   if (
     !process.env.EMAIL_ADDRESS ||
