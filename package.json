@@ -1,11 +1,12 @@
 {
-  "name": "mailLambda",
+  "name": "maillambda",
   "version": "0.1.0",
+  "license": "MIT",
+  "type": "module",
   "description": "mail forwarding AWS lambda function ",
   "main": "index.js",
   "repository": "https://github.com/johnlobster/mailLambda.git",
   "author": "John Webster <JohnLobster@comcast.net>",
-  "license": "MIT",
   "private": false,
   "dependencies": {
     "dotenv": "^8.2.0",
@@ -16,6 +17,10 @@
     "build": "npx netlify-lambda build functions"
   },
   "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "babel-jest": "^26.3.0",
+    "jest": "^26.4.2",
     "netlify-lambda": "^2.0.1"
   }
 }

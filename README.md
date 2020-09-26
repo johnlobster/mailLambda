@@ -34,3 +34,60 @@ CONTACT_DATA=""
 
 Local testing with Postman
 
+Testing is not that hard, configuration is a major pain. `netlify-lambda` gets you started quickly, but very hard to debug
+
+### Dev setup
+
+#### Add repo to netlify in github
+
+Netlify interface is probably easier
+
+Profile -> settings -> applications -> Netlify -> configure -> Repository access
+
+
+## Cheatsheet stuff
+
+Immediately-invoked Function Expression : IIFE
+`async` because that's an important use case
+
+```
+(async () => {
+  /* */
+})()
+```
+
+Pretty print object
+```
+Stringify(object, null, 2)
+```
+
+iterate over array
+
+await in loop - use for()
+
+forEach
+```
+array.forEach((item, index) => {
+
+}); 
+
+```
+
+iterate over an object
+```
+for (const key of Object.keys(myObject)) {
+
+}
+
+for (const [key, item] of Object.entries(body)) {
+
+
+}
+```
+
+arithmetic on Date() using .valueOf()
+```
+const runTime = new Date(exitTime.valueOf() - entryTime.valueOf())
+console.log(runTime.getSeconds())
+```
+
