@@ -43,6 +43,21 @@ node --trace-warnings mailer.node.test.js
 
 node incompatibility with js modules is very frustrating
 Tried to use Jest
+Tried to use bable config
+```
+module.exports = {
+  presets: [
+    [
+      '@babel/preset-env',
+      {
+        targets: {
+          node: 'current',
+        },
+      },
+    ],
+  ],
+};
+```
 
 When deployed on Netlify, test with Postman
 URL
